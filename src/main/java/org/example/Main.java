@@ -7,10 +7,10 @@ public class Main {
 
 Scanner scanner = new Scanner(System.in);
 byte firstOption;
-int select = 0;
 
 while (true) {
 System.out.println(""" 
+=============================================
 Welcome to the Coverter App
 
 Please choose between the following options:
@@ -19,6 +19,7 @@ Please choose between the following options:
 2. Weight Converter
 3. Time Converter
 4. Exit
+============================================
 """);
 
 
@@ -59,15 +60,18 @@ Please choose between the following options:
                 }
 
                 System.out.println("Result: " + result);
+                System.out.println();
                 break;
 
             case 2: System.out.println("Weight Converter coming soon...");
-
+                System.out.println();
                     break;
             case 3: System.out.println("Time Converter coming soon...");
+                System.out.println();
 
                     break;
             case 4: System.out.println("Exiting...");
+
                 return;
         }
 /* Flowchart
