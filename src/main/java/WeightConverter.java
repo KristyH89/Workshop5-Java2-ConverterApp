@@ -3,39 +3,34 @@ package org.example;
 import java.util.Scanner;
 
 public class WeightConverter {
+
     public static void runWeightConverter(Scanner scanner) {
 
-            String thirdOption;
-            Double weight;
+        String thirdOption;
+        double weight;
+        double result;
 
         while (true) {
 
             System.out.println("""
                     Please choose between the following options:
-                    k. KiloGram to gram
+                    k. Kilogram to gram
                     g. Gram to kilogram
-                    x. Back to main menu.
+                    x. Back to main menu
                     """);
 
             thirdOption = scanner.next();
+
             if (thirdOption.equals("x")) {
                 break;
             }
 
-            System.out.println("Enter weight: ");
+            System.out.print("Enter weight: ");
             weight = scanner.nextDouble();
-    /*
 
-
-
-            System.out.print("Enter amount: ");
-            amount = scanner.nextDouble();
-
-            switch (secondOption) {
-                case "a" -> result = Valutaconverter.SEKtoUSD(amount);
-                case "b" -> result = Valutaconverter.USDtoSEK(amount);
-                case "c" -> result = Valutaconverter.SEKtoEUR(amount);
-                case "d" -> result = Valutaconverter.EURtoSEK(amount);
+            switch (thirdOption) {
+                case "k" -> result = KGtoG(weight);
+                case "g" -> result = GtoKG(weight);
                 default -> {
                     System.out.println("Invalid choice, try again.");
                     continue;
@@ -44,16 +39,14 @@ public class WeightConverter {
 
             System.out.println("Result: " + result);
             System.out.println();
-
-     */
-
-public static double KGtoG(double kg) {
-        return kg * 1000;
-
-}
-    public static double GtoKG(double g) {
-              return g / 1000;
+        }
     }
 
+    public static double KGtoG(double kg) {
+        return kg * 1000;
+    }
 
+    public static double GtoKG(double g) {
+        return g / 1000;
+    }
 }

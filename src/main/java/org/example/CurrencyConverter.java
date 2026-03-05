@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CurrencyConverter {
 
 
-    public static void runConverter(Scanner scanner) {
+    public static void runCurrencyConverter(Scanner scanner) {
 
         String secondOption;
         double amount;

@@ -1,5 +1,6 @@
 package org.example;
 import org.example.CurrencyConverter;
+import org.example.WeightConverter;
 
 import java.util.Scanner;
 public class Main {
@@ -28,13 +29,14 @@ public class Main {
 
             switch (firstOption) {
                 case 1:
-                    Currencyconverter.runCurrencyConverter(scanner);
+                    CurrencyConverter.runCurrencyConverter(scanner);
                     break;
 
                 case 2:
-                    System.out.println("Weight Converter coming soon...");
+                    WeightConverter.runWeightConverter(scanner);
                     System.out.println();
                     break;
+
                 case 3:
                     System.out.println("Time Converter coming soon...");
                     System.out.println();
