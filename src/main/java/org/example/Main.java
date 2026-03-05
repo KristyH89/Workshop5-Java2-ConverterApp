@@ -5,7 +5,6 @@ public class Main {
 
 Scanner scanner = new Scanner(System.in);
 byte firstOption;
-char secondOption;
 int select = 0;
 
 
@@ -25,20 +24,23 @@ Please choose between the following options:
         System.out.print("Enter your choice:");
         firstOption = scanner.nextByte();
 
-        switch (select) {
+        switch (firstOption) {
             case 1:
                 System.out.println("""
                         Enter a for SEK till USD
                         Enter b for USD till SEK 
                         Enter c for SEK till EUR
                         Enter d for EUR till SEK""");
-                secondOption = scanner.next()
-            break;
-            case 2:
+                String secondOption = scanner.next();
+                System.out.print("Enter amount: ");
+                double amount = scanner.nextDouble();
+                double result = 0;
 
-            case 3:
+            case 2: System.out.println("Weight Converter coming soon...");
 
-            case 4:
+            case 3: System.out.println("Time Converter coming soon...");
+
+            case 4: System.out.println("Exiting...");
 
 
         }
