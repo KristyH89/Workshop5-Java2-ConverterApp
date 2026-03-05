@@ -38,7 +38,7 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("Time Converter coming soon...");
+                    TimeConverter.runTimeConverter(scanner);
                     System.out.println();
 
                     break;
