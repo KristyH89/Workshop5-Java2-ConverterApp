@@ -1,4 +1,6 @@
 package org.example;
+import org.example.Valutaconverter;
+
 import java.util.Scanner;
 public class Main {
     public static void main(String []args) {
@@ -7,7 +9,7 @@ Scanner scanner = new Scanner(System.in);
 byte firstOption;
 int select = 0;
 
-
+while (true) {
 System.out.println(""" 
 Welcome to the Coverter App
 
@@ -19,30 +21,54 @@ Please choose between the following options:
 4. Exit
 """);
 
-    while (true) {
 
         System.out.print("Enter your choice:");
         firstOption = scanner.nextByte();
 
         switch (firstOption) {
             case 1:
-                System.out.println("""
-                        Enter a for SEK till USD
-                        Enter b for USD till SEK 
-                        Enter c for SEK till EUR
-                        Enter d for EUR till SEK""");
-                String secondOption = scanner.next();
-                System.out.print("Enter amount: ");
-                double amount = scanner.nextDouble();
+               String secondOption;
+                double amount;
                 double result = 0;
+
+                while (true) {
+                    System.out.println("""
+        Enter a for SEK to USD
+        Enter b for USD to SEK
+        Enter c for SEK to EUR
+        Enter d for EUR to SEK
+        """);
+
+                    secondOption = scanner.next();
+
+                    System.out.print("Enter amount: ");
+                    amount = scanner.nextDouble();
+
+                    switch (secondOption) {
+                        case "a" -> result = Valutaconverter.SEKtoUSD(amount);
+                        case "b" -> result = Valutaconverter.USDtoSEK(amount);
+                        case "c" -> result = Valutaconverter.SEKtoEUR(amount);
+                        case "d" -> result = Valutaconverter.EURtoSEK(amount);
+                        default -> {
+                            System.out.println("Invalid choice, try again.");
+                            continue;
+                        }
+                    }
+
+                    break;
+                }
+
+                System.out.println("Result: " + result);
+                break;
 
             case 2: System.out.println("Weight Converter coming soon...");
 
+                    break;
             case 3: System.out.println("Time Converter coming soon...");
 
+                    break;
             case 4: System.out.println("Exiting...");
-
-
+                return;
         }
 /* Flowchart
 Converter App
