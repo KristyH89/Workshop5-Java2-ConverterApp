@@ -1,5 +1,5 @@
 package org.example;
-import org.example.Valutaconverter;
+import org.example.CurrencyConverter;
 
 import java.util.Scanner;
 public class Main {
@@ -28,7 +28,7 @@ public class Main {
 
             switch (firstOption) {
                 case 1:
-                    Valutaconverter.runCurrencyConverter(scanner);
+                    Currencyconverter.runCurrencyConverter(scanner);
                     break;
 
                 case 2:

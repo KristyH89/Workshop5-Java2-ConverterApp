@@ -2,10 +2,10 @@ package org.example;
 
 import java.util.Scanner;
 
-public class Valutaconverter {
+public class CurrencyConverter {
 
 
-    public static void runCurrencyConverter(Scanner scanner) {
+    public static void runConverter(Scanner scanner) {
 
         String secondOption;
         double amount;
@@ -31,10 +31,10 @@ public class Valutaconverter {
             amount = scanner.nextDouble();
 
             switch (secondOption) {
-                case "a" -> result = Valutaconverter.SEKtoUSD(amount);
-                case "b" -> result = Valutaconverter.USDtoSEK(amount);
-                case "c" -> result = Valutaconverter.SEKtoEUR(amount);
-                case "d" -> result = Valutaconverter.EURtoSEK(amount);
+                case "a" -> result = CurrencyConverter.SEKtoUSD(amount);
+                case "b" -> result = CurrencyConverter.USDtoSEK(amount);
+                case "c" -> result = CurrencyConverter.SEKtoEUR(amount);
+                case "d" -> result = CurrencyConverter.EURtoSEK(amount);
                 default -> {
                     System.out.println("Invalid choice, try again.");
                     continue;
