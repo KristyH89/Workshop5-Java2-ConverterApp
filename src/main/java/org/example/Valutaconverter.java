@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
+
 public class Valutaconverter {
 
     public static double SEKtoUSD(double sek) {
@@ -22,4 +23,8 @@ public class Valutaconverter {
         double rate = 10.70;
         return eur * rate;
     }
+
+
+
+
 }
