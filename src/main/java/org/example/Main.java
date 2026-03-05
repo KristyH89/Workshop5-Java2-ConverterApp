@@ -4,19 +4,21 @@ public class Main {
     public static void main(String []args) {
 
 Scanner scanner = new Scanner(System.in);
+byte firstoption;
 
 System.out.println(""" 
 Welcome to the Coverter App
 
 Please choose between the following options:
 
-Press 1 to use the Currency Converter
-Press 2 to use the Weight Converter
-Press 3 to use the Time Converter
-Press 4 to Exit the Converter App
+1. Currency Converter
+2. Weight Converter
+3. Time Converter
+4. Exit
 """);
 
-
+System.out.print("Enter your choice:");
+        firstoption = scanner.nextByte();
 
 
 /* Flowchart
