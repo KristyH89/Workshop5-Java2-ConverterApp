@@ -4,7 +4,10 @@ public class Main {
     public static void main(String []args) {
 
 Scanner scanner = new Scanner(System.in);
-byte firstoption;
+byte firstOption;
+char secondOption;
+int select = 0;
+
 
 System.out.println(""" 
 Welcome to the Coverter App
@@ -17,10 +20,28 @@ Please choose between the following options:
 4. Exit
 """);
 
-System.out.print("Enter your choice:");
-        firstoption = scanner.nextByte();
+    while (true) {
+
+        System.out.print("Enter your choice:");
+        firstOption = scanner.nextByte();
+
+        switch (select) {
+            case 1:
+                System.out.println("""
+                        Enter a for SEK till USD
+                        Enter b for USD till SEK 
+                        Enter c for SEK till EUR
+                        Enter d for EUR till SEK""");
+                secondOption = scanner.next()
+            break;
+            case 2:
+
+            case 3:
+
+            case 4:
 
 
+        }
 /* Flowchart
 Converter App
 Start
@@ -31,8 +52,10 @@ Start
 4. Exit
 
 Option 1:
-Choose u for USD
-Choose e for EUR
+Choose a for SEK --> USD
+Choose b for USD --> SEK
+Choose c for SEK --> EUR
+choose d for EUR --> SEK
 
 Enter amount in SEK:
 Result = amount * 0,109
@@ -67,6 +90,6 @@ Print result + hours
 
  */
 
-
+    }
     }
 }
